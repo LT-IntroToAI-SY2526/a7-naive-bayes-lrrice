@@ -69,6 +69,14 @@ class BayesClassifier:
         # for index, filename in enumerate(files, 1): # type: ignore
         #     print(f"Training on file {index} of {len(files)}")
         #     <the rest of your code for updating frequencies here>
+        for index, filename in enumerate(files, 1): # type: ignore
+            print(f"Training on file {index} of {len(files)}")
+        #     <the rest of your code for updating frequencies here>
+            print(f"{index}: {filename}")
+            text = self.load_file(os.path.join(self.training_data_directory, filename))
+            print(text)
+            tokens = self.tokenize(text)
+            print(tokens)
 
 
         # we want to fill pos_freqs and neg_freqs with the correct counts of words from
