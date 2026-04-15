@@ -238,22 +238,22 @@ class BayesClassifier:
 if __name__ == "__main__":
     # uncomment the below lines once you've implemented `train` & `classify`
     b = BayesClassifier()
-    # a_list_of_words = ["I", "really", "like", "this", "movie", ".", "I", "hope", \
-    #                    "you", "like", "it", "too"]
-    # a_dictionary = {}
-    # b.update_dict(a_list_of_words, a_dictionary)
-    # assert a_dictionary["I"] == 2, "update_dict test 1"
-    # assert a_dictionary["like"] == 2, "update_dict test 2"
-    # assert a_dictionary["really"] == 1, "update_dict test 3"
-    # assert a_dictionary["too"] == 1, "update_dict test 4"
-    # print("update_dict tests passed.")
+    a_list_of_words = ["I", "really", "like", "this", "movie", ".", "I", "hope", \
+                        "you", "like", "it", "too"]
+    a_dictionary = {}
+    b.update_dict(a_list_of_words, a_dictionary)
+    assert a_dictionary["I"] == 2, "update_dict test 1"
+    assert a_dictionary["like"] == 2, "update_dict test 2"
+    assert a_dictionary["really"] == 1, "update_dict test 3"
+    assert a_dictionary["too"] == 1, "update_dict test 4"
+    print("update_dict tests passed.")
 
-    # pos_denominator = sum(b.pos_freqs.values())
-    # neg_denominator = sum(b.neg_freqs.values())
+    pos_denominator = sum(b.pos_freqs.values())
+    neg_denominator = sum(b.neg_freqs.values())
 
-    # print("\nThese are the sums of values in the positive and negative dicitionaries.")
-    # print(f"sum of positive word counts is: {pos_denominator}")
-    # print(f"sum of negative word counts is: {neg_denominator}")
+    print("\nThese are the sums of values in the positive and negative dicitionaries.")
+    print(f"sum of positive word counts is: {pos_denominator}")
+    print(f"sum of negative word counts is: {neg_denominator}")
 
     # print("\nHere are some sample word counts in the positive and negative dicitionaries.")
     # print(f"count for the word 'love' in positive dictionary {b.pos_freqs['love']}")
